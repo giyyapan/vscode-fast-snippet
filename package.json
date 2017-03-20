@@ -6,7 +6,7 @@
         "type": "git",
         "url": "https://github.com/giyyapan/vscode-fast-snippet"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "giyyapan",
     "engines": {
         "vscode": "^1.10.0"
