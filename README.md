@@ -9,7 +9,7 @@ Fast Snippet can only be triggered by defining your keybindings.
 For example:
 
 Adding this in config into your keybindings.json
-```json
+```javascript
     {
         // input "=>" with ctrl+alt+>
         "key": "ctrl+alt+shift+.",
@@ -22,7 +22,7 @@ and your will be able to insert `=>` with one shourtcut.
 Fast Snippet also support cursor position offset, you can set where to put your cursor after text inserted.
 
 See this example:
-```json
+```javascript
     {
         // input "()" and put cursor in the middle with alt+(
         "key": "alt+shift+9",
@@ -34,12 +34,14 @@ This will let you insert a pair of `()` and put cursor between them when press `
 
 You can do the same things to `""`, `''`, `[]`, `<>` and more.
 
+> Note: cursor offset must not bigger than `0`, and it's default value is `0`.
+
 This can be extremely handy if you don't wan't editor to auto-close brackets for you. (It's much more stupied than it's designed to be :p).
 
-*Enjoy!*
-
 ## Selection behaviour
-When you save one or more selection, Fast Snippet will do these steps:
+If your cursor offset is 0 , Fast Snippet will assume you may not intend to use this snippet with selection (like the `=>` example above), If you do have a selection, Fast Snippet will cancel the selection, and insert your snippet right after it.
+
+If your cursor offset smaller than 0, and you have one or more selections, Fast Snippet will do the following steps:
 
 - Cut all text in selection.
 - Insert your sneppet.
@@ -48,7 +50,8 @@ When you save one or more selection, Fast Snippet will do these steps:
 
 So if you have some text surrounded by selection, triggering `alt+(` in the example above will create a pair of `()` that surrounds your text.
 
-## TODOs
-Nothing in my mind yet, this is good enough now.
+## Next
+Nothing in my mind yet, maybe you can tell me ?
 
-Maybe make selection behaviour configurable, or let you insert normal snippet with on keyboard shortcut ?
+-----
+*Enjoy!*
