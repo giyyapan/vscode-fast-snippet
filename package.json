@@ -14,14 +14,7 @@
         "onCommand:fastsnippet.insertText"
     ],
     "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "fastsnippet.insertText",
-                "title": "Fast Snippet: insert text"
-            }
-        ]
-    },
+    "contributes": {},
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "compile": "tsc -watch -p ./",

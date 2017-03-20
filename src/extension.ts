@@ -1,6 +1,4 @@
 'use strict';
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
 const IDENTIFIER = "fastsnippet"
@@ -37,12 +35,6 @@ function insertText(args: [string, number, string[]]) {
             }
             editBuilder.replace(selection, "");
             editBuilder.insert(selection.active, newText);
-            // let start = editor.document.offsetAt(selection.start);
-            // let startPos = editor.document.positionAt(start);
-            // let end = editor.document.offsetAt(selection.end);
-            // let endPos = editor.document.positionAt(end);
-            // editBuilder.insert(startPos, '"')
-            // editBuilder.insert(endPos, '"')
         })
     })
     // execute cursor commands
@@ -60,9 +52,6 @@ function insertText(args: [string, number, string[]]) {
     }, 40);
 }
 
-
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
     let commands = [
         vscode.commands.registerCommand(`${IDENTIFIER}.insertText`, (args) => {
@@ -73,6 +62,4 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(...commands);
 }
 
-// this method is called when your extension is deactivated
-export function deactivate() {
-}
+export function deactivate() {}

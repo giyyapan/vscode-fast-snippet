@@ -36,7 +36,7 @@ You can do the same things to `""`, `''`, `[]`, `<>` and more.
 
 > Note: cursor offset must not bigger than `0`, and it's default value is `0`.
 
-This can be extremely handy if you don't wan't editor to auto-close brackets for you. (It's much more stupied than it's designed to be :p).
+This can be extremely handy if you don't wan't editor to auto-close brackets for you. (It's just not smart enough).
 
 ## Selection behaviour
 If your cursor offset is 0 , Fast Snippet will assume you may not intend to use this snippet with selection (like the `=>` example above), If you do have a selection, Fast Snippet will cancel the selection, and insert your snippet right after it.
