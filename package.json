@@ -2,8 +2,12 @@
     "name": "fast-snippet",
     "displayName": "Fast Snippet",
     "description": "Insert small snippet (like '=>') with one command.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/giyyapan/vscode-fast-snippet"
+    },
     "version": "1.0.0",
-    "publisher": "GiyyaPan",
+    "publisher": "giyyapan",
     "engines": {
         "vscode": "^1.10.0"
     },
